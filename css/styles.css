@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 15px;
+    font-family: 'League Spartan', sans-serif;
+    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    background-size: 40%, 70%;
+    width: 100%;
+    height: 100vh;
+    padding-top: .5rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    padding: 10px;
+    gap: 3rem;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+}
+
+header{
+    width: 50%;
+}
+
+header h1{
+    color: hsl(300, 43%, 22%);
+    font-size: 3rem;
+    margin-bottom: 1.3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.light{
+    color: hsl(303, 10%, 53%);
+    font-size: 1rem;
+    padding: 0 4rem 0 0;
+    font-weight: 500;
+}
+
+.reviews{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ratings{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .8rem 1rem;
+    background-color: hsl(300, 24%, 96%);
+    margin-top: .8rem;
+    width: 80%;
+    font-size: .8rem;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.ratings:first-of-type{
+    transform: translate(-3rem);
+}
+
+.ratings:last-of-type{
+    transform: translate(3rem);
+}
+
+.stars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars img{
+    padding: 0 .2rem;
+}
+
+.testimonies{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    font-weight: 400;
+}
+
+.card{
+    background-color: hsl(300, 43%, 22%);
+    width: 33.3%;
+    padding: 2rem;
+    color: hsl(0, 0%, 100%);
+    border-radius: .5rem;
+}
+
+.card:first-of-type{
+    transform: translateY(-1rem);
+}
+
+.card:last-of-type{
+    transform: translateY(1rem);
+}
+
+/* .right{
+    margin-right: 0;
+} */
+
+.customer{
+    display: flex;
+    gap: 1.2rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.customer img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.title{
+    color: hsl(333, 80%, 67%);
+}
+
+blockquote{
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* mobile style */
+
+@media only screen and (max-width: 375px){
+    body{
+        width: 100%;
+        height: auto;
+        padding: .5rem;
+        font-size: 15px;
+        background-image: url(../images/bg-pattern-top-mobile.svg),
+        url(../images/bg-pattern-bottom-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top left, bottom right;
+        background-size: 100%, 100%;
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    header{
+        width: 100%;
+    }
+
+    header h1{
+        text-align: center;
+        font-size: 2.6rem;
+        margin-bottom: 1.3rem;
+        font-weight: 700;
+        line-height: 1;
+        padding: 0 1.5rem;
+    }
+
+    .light{
+        color: hsl(303, 10%, 53%);
+        font-size: 1rem;
+        text-align: center;
+        padding: 0 .4rem;
+        line-height: 1.5rem;
+    }
+
+    .reviews{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ratings{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0rem;
+        background-color: hsl(300, 24%, 96%);
+        margin-top: .8rem;
+        width: 100%;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+
+    .ratings:first-of-type{
+        transform: translate(0);
+    }
+    
+    .ratings:last-of-type{
+        transform: translate(0);
+    }
+
+    .stars{
+        padding-bottom: .8rem;
+    }
+
+    .testimonies{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .card{
+        background-color: hsl(300, 43%, 22%);
+        width: 100%;
+        padding: 2.5rem 2rem;
+        color: hsl(0, 0%, 100%);
+        border-radius: .5rem;
+        text-align: left;
+    }
+    
+    .card:first-of-type{
+        transform: translateY(0);
+    }
+    
+    .card:last-of-type{
+        transform: translateY(0);
+    }
+    
+    .customer{
+        display: flex;
+        gap: 1.2rem;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 0 1.5rem 0;
+        font-size: .9rem;
+        line-height: 1.5;
+    }
+
+    blockquote{
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+}
